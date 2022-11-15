@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m3c-cv-eOU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2205" y="281"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="6gd-CB-aqG">
+            <objects>
+                <viewController id="x9s-oY-P7z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lCH-Q3-F9I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6c7-Cb-VFF"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="LU8-fb-fxN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbs-DE-ZcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="176"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="voH-iQ-eAA">
+            <objects>
+                <viewController id="fMh-Se-Ntb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="APv-QK-G12">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="95t-vR-1tk"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Jw7-qa-utA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agn-1z-Ocn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-430"/>
+        </scene>
+        <!--Tab Bar Controller Main View Controller-->
+        <scene sceneID="S3c-8Y-v68">
+            <objects>
+                <tabBarController id="m3c-cv-eOU" customClass="TabBarControllerMainViewController" customModule="CustomTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k1D-cX-pEk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="firstButton" destination="UKs-TP-XEI" id="d9G-Ny-Vjw"/>
+                        <outlet property="secondButton" destination="vrK-zt-FQw" id="TVf-sY-rHr"/>
+                        <outlet property="tabBarView" destination="j8z-LO-OGS" id="Ivk-nc-FGG"/>
+                        <segue destination="fMh-Se-Ntb" kind="relationship" relationship="viewControllers" id="ZLK-SN-tDX"/>
+                        <segue destination="x9s-oY-P7z" kind="relationship" relationship="viewControllers" id="8UT-nO-V6Q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mO0-fF-oMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="j8z-LO-OGS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrK-zt-FQw">
+                            <rect key="frame" x="207" y="59" width="207" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Ekran 2"/>
+                            <connections>
+                                <action selector="changeTab:" destination="m3c-cv-eOU" eventType="touchUpInside" id="UnK-0z-j1b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKs-TP-XEI">
+                            <rect key="frame" x="0.0" y="59" width="207" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Ekran 1"/>
+                            <connections>
+                                <action selector="changeTab:" destination="m3c-cv-eOU" eventType="touchUpInside" id="Dda-NN-OGh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="kj1-Zf-Tix"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="vrK-zt-FQw" firstAttribute="leading" secondItem="UKs-TP-XEI" secondAttribute="trailing" id="0MU-a3-5lo"/>
+                        <constraint firstItem="kj1-Zf-Tix" firstAttribute="bottom" secondItem="UKs-TP-XEI" secondAttribute="bottom" id="1zQ-Go-r1Q"/>
+                        <constraint firstItem="vrK-zt-FQw" firstAttribute="height" secondItem="UKs-TP-XEI" secondAttribute="height" id="2Xm-FH-lPa"/>
+                        <constraint firstItem="UKs-TP-XEI" firstAttribute="leading" secondItem="kj1-Zf-Tix" secondAttribute="leading" id="4jG-pH-bBH"/>
+                        <constraint firstItem="kj1-Zf-Tix" firstAttribute="top" secondItem="UKs-TP-XEI" secondAttribute="top" id="5mj-75-dzH"/>
+                        <constraint firstItem="kj1-Zf-Tix" firstAttribute="trailing" secondItem="vrK-zt-FQw" secondAttribute="trailing" id="JhL-wE-53X"/>
+                        <constraint firstItem="vrK-zt-FQw" firstAttribute="centerY" secondItem="UKs-TP-XEI" secondAttribute="centerY" id="irg-ZX-Vpq"/>
+                        <constraint firstItem="UKs-TP-XEI" firstAttribute="width" secondItem="vrK-zt-FQw" secondAttribute="width" id="zgX-a5-CIR"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-158" y="-127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
